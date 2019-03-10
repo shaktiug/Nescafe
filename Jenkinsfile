@@ -19,6 +19,7 @@ pipeline{
     parameters {
         string(defaultValue: "development", description: 'Branch Specifier', name: 'BRANCH')
         choice(name: 'dispatcher config', choices: ['vhost.nescafe.conf', 'vhost.nescafe-market.conf'], description: 'Choose any one config to update')
+		choice(name: 'instances', choices: ['dispatcher 1', 'dispatcher 2', 'All'], description: 'Choose the instance to deploy the config')
           }
           stages {
           stage("Initialize") {
