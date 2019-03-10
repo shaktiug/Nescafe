@@ -43,6 +43,7 @@ pipeline{
               steps {
                   echo 'Testing the configuration'
                   sh 'httpd -v'
+				  returnStdout: true
               }
 }
           stage('Deploy to UAT') {
