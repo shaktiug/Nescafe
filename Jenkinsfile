@@ -29,6 +29,7 @@ pipeline{
           stage('Deploy to UAT') {
                   steps {
                       echo 'Pushing the config to the webservers'
+					  sh 'chmod 777 push_uat.sh'
                       sh './push_uat.sh'
                   }
           }
@@ -41,6 +42,7 @@ pipeline{
         stage('Deploy to PROD') {
                 steps {
                     echo 'Pushing the config to the webservers'
+					sh 'chmod 777 push_prod.sh'
                     sh './push_prod.sh'
                 }
         }
