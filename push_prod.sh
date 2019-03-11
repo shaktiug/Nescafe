@@ -15,8 +15,9 @@ ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.222.1.157 "sudo mv /tmp/${config
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.222.1.157 "sudo chown root:root /var/www/html/${config_type}; sudo chmod 644 /var/www/html/${config_type}"
 
 echo " Restarting dispatcher 1 "
-
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.222.1.157 "sudo service httpd restart"
+fi
+fi
 
 if [ "${instance}" =  "dispatcher_2" ];
 then
@@ -36,3 +37,5 @@ ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.212.29.187 "sudo chown root:root
 echo " Restarting dispatcher 1 "
 
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.212.29.187 "sudo service httpd restart"
+fi
+fi
