@@ -1,3 +1,4 @@
+set -x
 if [ "${instance}" =  "dispatcher_uat" ];
 then
 if  [ "${config_type}" = "index.html" ] || [ "${config_type}" = "welcome.html" ];
@@ -19,3 +20,4 @@ ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@52.12.160.247 "sudo service httpd r
 fi
 fi
 
+set +x

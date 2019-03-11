@@ -1,4 +1,4 @@
-
+set -x
 if [ "${instance}" =  "dispatcher_1" ];
 then
 if  [ "${config_type}" = "index.html" ] || [ "${config_type}" = "welcome.html" ];
@@ -39,3 +39,4 @@ echo " Restarting dispatcher 1 "
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.212.29.187 "sudo service httpd restart"
 fi
 fi
+set +x
