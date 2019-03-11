@@ -23,15 +23,15 @@ pipeline{
 		choice(name: 'instance', choices: ['dispatcher 1', 'dispatcher 2', 'All'], description: 'Choose the instance to deploy the config')
           }
           stages {
-          stage("Initialize") {
-              steps {
-                  script {
-                      notifyBuild('STARTED')
-                      echo "${BUILD_NUMBER} - ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                      echo "Branch Specifier :: ${params.SPECIFIER}"
-                  }
-              }
-          }
+          #stage("Initialize") {
+           #   steps {
+            #      script {
+             #         notifyBuild('STARTED')
+              #        echo "${BUILD_NUMBER} - ${env.BUILD_ID} on ${env.JENKINS_URL}"
+               #       echo "Branch Specifier :: ${params.SPECIFIER}"
+                #  }
+              #}
+          #}
 
           stage('Checkout') {
               steps {
