@@ -1,5 +1,5 @@
 pipeline{
-    agent none 
+    agent any 
     environment {
         APP_NAME = 'Nescafe'
         BUILD_NUMBER = "${env.BUILD_NUMBER}"
