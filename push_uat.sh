@@ -16,3 +16,6 @@ ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@52.12.160.247 "sudo chown root:root
 echo " Restarting dispatcher 1 "
 
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@52.12.160.247 "sudo service httpd restart"
+fi
+fi
+
