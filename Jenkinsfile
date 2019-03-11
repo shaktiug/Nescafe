@@ -4,6 +4,7 @@ pipeline{
          image: 'httpd:latest'
          args '-p 80:80 -v /var/www/html:/var/www/html'
        }
+    }
     environment {
         APP_NAME = 'Nescafe'
         BUILD_NUMBER = "${env.BUILD_NUMBER}"
@@ -65,6 +66,5 @@ pipeline{
                 }
         }
 
-}
 }
 }
