@@ -9,7 +9,7 @@ ssh -i dev-aws.pem ec2-user@52.12.160.247 "sudo cp /var/www/html/${config_type} 
 fi
 echo " Deploying the new ${config_type} "
 
-scp -i dev-aws.pem ${WORKSPACE}//${config_type} ec2-user@52.12.160.247:/tmp
+scp -i dev-aws.pem ${WORKSPACE}/${config_type} ec2-user@52.12.160.247:/tmp
 ssh -i dev-aws.pem ec2-user@52.12.160.247 "sudo mv /tmp/${config_type} /var/www/html/${config_type}"
 ssh -i dev-aws.pem ec2-user@52.12.160.247 "sudo chown root:root /var/www/html/${config_type}; sudo chmod 644 /var/www/html/${config_type}"
 
