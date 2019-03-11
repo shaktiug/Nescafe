@@ -1,7 +1,7 @@
 pipeline{
     agent {
        docker {
-         image: 'httpd:latest'
+         image 'httpd:latest'
          args '-p 80:80 -v /var/www/html:/var/www/html'
        }
     }
@@ -44,7 +44,6 @@ pipeline{
               steps {
                   echo 'Testing the configuration'
                   sh 'httpd -v'
-				  returnStdout: true
               }
 }
           stage('Deploy to UAT') {
