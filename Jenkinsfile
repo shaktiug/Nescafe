@@ -26,12 +26,6 @@ pipeline{
               }
       }
 
-          stage('Test') {
-              steps {
-                  echo 'Testing the configuration'
-                  sh 'httpd -v'
-              }
-}
           stage('Deploy to UAT') {
                   steps {
                       echo 'Pushing the config to the webservers'
