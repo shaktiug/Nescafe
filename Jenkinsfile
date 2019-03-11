@@ -15,7 +15,7 @@ pipeline{
     parameters {
         string(defaultValue: "development", description: 'Branch Specifier', name: 'BRANCH')
         choice(name: 'config_type', choices: ['index.html', 'welcome.html'], description: 'Choose any one config to update')
-		choice(name: 'instance', choices: ['dispatcher_1', 'dispatcher_2', 'All'], description: 'Choose the instance to deploy the config')
+		choice(name: 'instance', choices: ['dispatcher_uat', 'dispatcher_1', 'dispatcher_2', 'All'], description: 'Choose the instance to deploy the config')
           }
           stages {
 
