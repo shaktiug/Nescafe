@@ -1,6 +1,6 @@
 set -x
-if [ "${instance}" =  "dispatcher_1" ];
-then
+#if [ "${instance}" =  "dispatcher_1" ];
+#then
 if  [ "${config_type}" = "index.html" ] || [ "${config_type}" = "welcome.html" ];
 then
 echo " Backing up the deployed ${config_type} "
@@ -17,10 +17,10 @@ ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.222.1.157 "sudo chown root:root 
 echo " Restarting dispatcher 1 "
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.222.1.157 "sudo service httpd restart"
 fi
-fi
+#fi
 
-if [ "${instance}" =  "dispatcher_2" ];
-then
+#if [ "${instance}" =  "dispatcher_2" ];
+#then
 if  [ "${config_type}" = "index.html" ] || [ "${config_type}" = "welcome.html" ];
 then
 echo " Backing up the deployed ${config_type} "
@@ -38,5 +38,5 @@ echo " Restarting dispatcher 1 "
 
 ssh -i /var/lib/jenkins/dev-aws.pem ec2-user@34.212.29.187 "sudo service httpd restart"
 fi
-fi
+#fi
 set +x
