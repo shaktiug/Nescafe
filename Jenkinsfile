@@ -3,7 +3,7 @@ pipeline{
     environment {
         APP_NAME = 'Nescafe'
         BUILD_NUMBER = "${env.BUILD_NUMBER}"
-        GIT_URL="git@github.yourdomain.com:shaktiug/${APP_NAME}.git"
+        GIT_URL="git@github.com:shaktiug/${APP_NAME}.git"
     }
 
     options {
