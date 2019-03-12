@@ -38,7 +38,6 @@ pipeline{
                 input "Does the staging environment look ok?"
             }
         }
-
         stage('Deploy to PROD') {
                 steps {
                     echo 'Pushing the config to the webservers'
