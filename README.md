@@ -1,2 +1,0 @@
-# Nescafe
-Nescafe demo project
